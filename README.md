@@ -1,5 +1,7 @@
 # (WIP) book auth api using nextjs + prisma + mysql + joi + bcrypt + jsonwebtoken
 
+all code are stil on-working, many are copied from other sources
+
 ## schema.prisma
 ```
 generator client {
