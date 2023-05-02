@@ -1,6 +1,5 @@
 import Joi from "joi";
 import InvariantError from "@/backend/errors/InvariantError";
-import { NextResponse } from "next/server";
 
 export const validatePostRegisterPayload = (body) => {
   const schema = Joi.object({

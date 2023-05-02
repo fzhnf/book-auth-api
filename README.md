@@ -1,6 +1,8 @@
 # (WIP) book auth api using nextjs + prisma + mysql + joi + bcrypt + jsonwebtoken
 
-all code are stil on-working, many are copied from other sources
+[1]convert libs/prismadb from .ts to .js
+[2]customizing services/userService - "add _newEmail" (Currently Not Working)
+[3]add services/tokenService
 
 ## schema.prisma
 ```
@@ -44,7 +46,6 @@ model Book {
 
 
 ## file-tree
-```
 └───src
     ├───app
     │   │   favicon.ico
@@ -59,42 +60,36 @@ model Book {
     │       │   └───[id]
     │       │           route.js
     │       │
-    │       └───user
-    │           ├───login
-    │           │       route.js
-    │           │
-    │           ├───me
-    │           │       route.js
-    │           │
-    │           └───register
-    │                   route.js
+    │       ├───login
+    │       │       route.js
+    │       │
+    │       ├───me
+    │       │       route.js
+    │       │
+    │       └───register
+    │               route.js
     │
     └───backend
-        ├───handlers
-        │   ├───errors
-        │   │       AuthenticationError.ts
-        │   │       AuthorizationError.ts
-        │   │       ClientError.ts
-        │   │       InvariantError.ts
-        │   │       NotFoundError.ts
-        │   │
-        │   ├───libs
-        │   └───utils
+        ├───errors
+        │       AuthenticationError.js
+        │       AuthorizationError.js
+        │       ClientError.js
+        │       InvariantError.js
+        │       NotFoundError.js
+        │
+        ├───libs
+        │       prismadb.js
+        │
         ├───services
-        │   ├───bookService
-        │   │       addBook.js
-        │   │       deleteBookById.js
-        │   │       editBookById.js
-        │   │       getBookById.js
-        │   │       getBooks.js
-        │   │
-        │   └───userService
-        │           addUser.js
-        │           getUserProfileById.js
-        │           updateUserProfieById.js
+        │       bookService.js
+        │       tokenService.js
+        │       userService.js
+        │
+        ├───utils
+        │       errorHandler.js
+        │       getTokenHandler.js
         │
         └───validators
-                bookValidator.ts
-                loginValidator.ts
-                registerValidator.ts
-```
+                bookValidator.js
+                loginValidator.js
+                registerValidator.js

@@ -25,7 +25,7 @@ const _verifyNewEmail = async (email) => {
   });
 
   if (existingEmail) {
-    throw new InvariantError("Email sudah dipakai")
+    throw new InvariantError("Email sudah digunakan")
   }
 }
 
