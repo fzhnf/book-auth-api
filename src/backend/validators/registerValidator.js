@@ -1,16 +1,18 @@
 import Joi from "joi";
 import InvariantError from "@/backend/errors/InvariantError";
+import { NextResponse } from "next/server";
 
-export const validatePostRegisterPayload = (payload) => {
+export const validatePostRegisterPayload = (body) => {
   const schema = Joi.object({
     username: Joi.string().required(),
-    email: Joi.string().email().required(),
+    email: Joi.string().required().email(),
     password: Joi.string().min(8).required(),
   });
 
-  const validationResult = schema.validate(payload);
+  const validationResult = schema.validate(body);
 
   if (validationResult.error) {
     throw new InvariantError(validationResult.error.message);
+ 
   }
 };
