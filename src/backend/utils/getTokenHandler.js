@@ -1,5 +1,5 @@
 import AuthenticationError from "@/backend/errors/AuthenticationError";
-import { decodeToken } from "@/backend/services/tokenService";
+import { decodeToken } from "@/backend/libs/jsonwebtoken";
 
 const getTokenHandler = (request) => {
   const token = request.headers.get('authorization')?.split(" ")[1];
