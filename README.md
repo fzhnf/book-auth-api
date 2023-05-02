@@ -1,7 +1,9 @@
 # (WIP) book auth api using nextjs + prisma + mysql + joi + bcrypt + jsonwebtoken
 
 [1]convert libs/prismadb from .ts to .js
+
 [2]customizing services/userService - "add _newEmail" (Currently Not Working)
+
 [3]add services/tokenService
 
 ## schema.prisma
