@@ -1,5 +1,5 @@
 import Joi from "joi";
-import InvariantError from "@/errors/InvariantError";
+import InvariantError from "@/backend/errors/InvariantError";
 
 export const validatePostBookPayload = (payload) => {
   const schema = Joi.object({

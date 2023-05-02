@@ -1,8 +1,7 @@
 import { nanoid } from "nanoid";
-
-import InvariantError from "@/errors/InvariantError";
-import NotFoundError from "@/errors/NotFoundError";
-import AuthorizationError from "@/errors/AuthorizationError";
+import InvariantError from "@/backend/errors/InvariantError";
+import NotFoundError from "@/backend/errors/NotFoundError";
+import AuthorizationError from "@/backend/errors/AuthorizationError";
 
 import prisma from "../libs/prismadb";
 

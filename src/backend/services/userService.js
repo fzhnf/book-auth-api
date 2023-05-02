@@ -1,9 +1,9 @@
 import bcrypt from "bcrypt";
 import { nanoid } from "nanoid";
 
-import InvariantError from "@/errors/InvariantError";
-import AuthenticationError from "@/errors/AuthenticationError";
-import NotFoundError from "@/errors/NotFoundError";
+import InvariantError from "@/backend/errors/InvariantError";
+import AuthenticationError from "@/backend/errors/AuthenticationError";
+import NotFoundError from "@/backend/errors/NotFoundError";
 
 import prisma from "../libs/prismadb";
 
