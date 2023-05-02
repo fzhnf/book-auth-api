@@ -46,6 +46,7 @@ model Book {
 
 
 ## file-tree
+```
 └───src
     ├───app
     │   │   favicon.ico
@@ -93,3 +94,4 @@ model Book {
                 bookValidator.js
                 loginValidator.js
                 registerValidator.js
+```
