@@ -1,9 +1,7 @@
 import { NextResponse } from "next/server";
-
-import errorHandler from "@/utils/errorHandler";
-import getTokenHandler from "@/utils/getTokenHandler";
-
-import { getUserProfileById } from "@/services/userService";
+import errorHandler from "@/backend/utils/errorHandler";
+import getTokenHandler from "@/backend/utils/getTokenHandler";
+import { getUserProfileById } from "@/backend/services/userService";
 
 export async function GET(request) {
   try {

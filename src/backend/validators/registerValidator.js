@@ -1,8 +1,9 @@
 import Joi from "joi";
-import InvariantError from "@/backend/errors/InvariantError";
+import InvariantError from "@/errors/InvariantError";
 
-export const validatePostLoginPayload = (payload: any) => {
+export const validatePostRegisterPayload = (payload) => {
   const schema = Joi.object({
+    username: Joi.string().required(),
     email: Joi.string().email().required(),
     password: Joi.string().min(8).required(),
   });

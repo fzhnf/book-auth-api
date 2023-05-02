@@ -1,7 +1,7 @@
 import Joi from "joi";
 import InvariantError from "@/errors/InvariantError";
 
-export const validatePostBookPayload = (payload: any) => {
+export const validatePostBookPayload = (payload) => {
   const schema = Joi.object({
     title: Joi.string().required(),
     description: Joi.string().required(),
@@ -14,7 +14,7 @@ export const validatePostBookPayload = (payload: any) => {
   }
 }
 
-export const validatePutBookPayload = (payload: any) => {
+export const validatePutBookPayload = (payload) => {
   const schema = Joi.object({
     title: Joi.string().required(),
     description: Joi.string().required(),

@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
-
 import errorHandler from "@/utils/errorHandler";
 import { generateToken } from "@/token/tokenManager";
-
 import { addUser } from "@/services/userService";
 import { validatePostRegisterPayload } from "@/validators/registerValidator";
 

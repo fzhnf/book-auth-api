@@ -1,17 +1,15 @@
 import { NextResponse } from "next/server";
-
-import errorHandler from "@/utils/errorHandler";
-import getTokenHandler from "@/utils/getTokenHandler";
-
-import { validatePutBookPayload } from "@/validators/bookValidator";
-import { getDetailBookById, editBookById, deleteBookById } from "@/services/bookService";
+import errorHandler from "@/backend/utils/errorHandler";
+import getTokenHandler from "@/backend/utils/getTokenHandler";
+import { validatePutBookPayload } from "@/backen/validators/bookValidator";
+import { getBookById, editBookById, deleteBookById } from "@/backend/services/bookService";
 
 export async function GET(request, { params }) {
   try {
     const userId = getTokenHandler(request);
     const bookId = params.id;
 
-    const book = await getDetailBookById({userId, bookId});
+    const book = await getBookById({userId, bookId});
 
     return NextResponse.json({
       status: 'success',
@@ -52,7 +50,7 @@ export async function PUT(request, { params }) {
   }
 }
 
-export async function DELETE(request, { params }) {
+export async function DELETE(request, { params } ) {
   try {
     const userId = getTokenHandler(request);
     const bookId = params.id;
@@ -70,4 +68,4 @@ export async function DELETE(request, { params }) {
       data,
     }, { status });
   }
-}
+} 
