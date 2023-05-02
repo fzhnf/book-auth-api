@@ -73,28 +73,28 @@ model Book {
     │               route.js
     │
     └───backend
-        ├───errors
-        │       AuthenticationError.js
-        │       AuthorizationError.js
-        │       ClientError.js
-        │       InvariantError.js
-        │       NotFoundError.js
-        │
-        ├───libs
-        │       jsonwebtoken.js
-        │       prismadb.js
-        │
-        ├───services
-        │       bookService.js
-        │       userService.js
-        │
-        ├───utils
-        │       errorHandler.js
-        │       getTokenHandler.js
-        │
-        └───validators
-                bookValidator.js
-                loginValidator.js
-                registerValidator.js
-
-```
+          ├───errors
+          │       AuthenticationError.js
+          │       AuthorizationError.js
+          │       ClientError.js
+          │       InvariantError.js
+          │       NotFoundError.js
+          │
+          ├───libs
+          │       prismadb.js
+          │
+          ├───services
+          │       bookService.js
+          │       userService.js
+          │
+          ├───token
+          │       jsonwebtoken.js
+          │
+          ├───utils
+          │       errorHandler.js
+          │       getTokenHandler.js
+          │
+          └───validators
+                  bookValidator.js
+                  loginValidator.js
+                  registerValidator.js
