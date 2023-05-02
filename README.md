@@ -81,11 +81,11 @@ model Book {
         │       NotFoundError.js
         │
         ├───libs
+        │       jsonwebtoken.js
         │       prismadb.js
         │
         ├───services
         │       bookService.js
-        │       tokenService.js
         │       userService.js
         │
         ├───utils
@@ -96,4 +96,5 @@ model Book {
                 bookValidator.js
                 loginValidator.js
                 registerValidator.js
+
 ```
